@@ -17,7 +17,7 @@ class install_google_chrome (
         }
 
 
-        package { 'Chrome':
+        package { 'Google Chrome':
           ensure => installed,
           source => "${staging_windir}\\install_google_chrome\\${msi}",
           require => [ Staging::File[$msi], Acl["${staging_windir}/install_google_chrome/${msi}"] ],
